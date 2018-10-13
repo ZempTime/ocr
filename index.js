@@ -21,7 +21,7 @@ let corsOptions;
 app.use(cors());
 
 app.get("/", (req, res) => {
-  res.send("wat");
+  res.send(`ಠ_ಠ`);
 });
 
 app.post("/parse", upload.single("image"), function(req, res) {
