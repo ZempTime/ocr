@@ -8,11 +8,7 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
-app.use(
-  cors({
-    origin: "https://guidegh7.netlify.com/"
-  })
-);
+app.use(cors());
 
 app.get("/", (_req, res) => {
   res.send(`ಠ_ಠ`);
@@ -22,7 +18,7 @@ app.post("/parse", upload.single("image"), function(req, res) {
   console.log(`Processing ${req.file.originalname}`);
   recognize(req.file.buffer, (err, text) => {
     if (err) throw err;
-    res.json(200, { text });
+    res.status(200).json({ text });
   });
 });
 
