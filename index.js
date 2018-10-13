@@ -2,6 +2,7 @@ const express = require("express");
 const recognize = require("tesseractocr");
 const multer = require("multer");
 const upload = multer();
+const cors = require("cors");
 
 const app = express();
 
