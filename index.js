@@ -15,10 +15,10 @@ let corsOptions;
 //     origin: "https://guidegh7.netlify.com/"
 //   };
 // } else {
-corsOptions = {};
+// corsOptions = {};
 // }
 
-app.use(cors(corsOptions));
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.send("wat");
