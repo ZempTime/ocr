@@ -10,13 +10,13 @@ const PORT = process.env.PORT || 8080;
 
 let corsOptions;
 
-if (process.env.NODE_ENV === "production") {
-  corsOptions = {
-    origin: "https://guidegh7.netlify.com/"
-  };
-} else {
-  corsOptions = {};
-}
+// if (process.env.NODE_ENV === "production") {
+//   corsOptions = {
+//     origin: "https://guidegh7.netlify.com/"
+//   };
+// } else {
+corsOptions = {};
+// }
 
 app.use(cors(corsOptions));
 
