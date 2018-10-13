@@ -7,6 +7,12 @@ const app = express();
 
 const PORT = process.env.PORT || 8080;
 
+app.use(
+  cors({
+    origin: "https://guidegh7.netlify.com/"
+  })
+);
+
 app.get("/", (_req, res) => {
   res.send(`ಠ_ಠ`);
 });
