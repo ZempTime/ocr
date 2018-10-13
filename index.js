@@ -6,9 +6,19 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = 9001;
+const PORT = process.env.OCR_PORT || 9001;
 
-app.use(cors());
+let corsOptions;
+
+if (process.env.NODE_ENV === "production") {
+  corsOptions = {
+    origin: "https://guidegh7.netlify.com/"
+  };
+} else {
+  corsOptions = {};
+}
+
+app.use(cors(corsOptions));
 
 app.get("/", (req, res) => {
   res.send("wat");
