@@ -24,6 +24,8 @@ app.get("/", (req, res) => {
   res.send(`ಠ_ಠ`);
 });
 
+app.post("/parse", cors());
+
 app.post("/parse", upload.single("image"), function(req, res) {
   console.log(`Processing ${req.file.originalname}`);
   recognize(req.file.buffer, (err, text) => {
