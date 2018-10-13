@@ -6,7 +6,7 @@ const cors = require("cors");
 
 const app = express();
 
-const PORT = process.env.OCR_PORT || 9001;
+const PORT = process.env.PORT || 8080;
 
 let corsOptions;
 
